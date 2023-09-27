@@ -87,7 +87,24 @@ public class MyLinkedList<T> implements Iterable<T>{
         for (String data : myLinkedList) {
             System.out.println(data);
         }
+        //iterator
+    MyStack<Integer> myStack = new MyStack<>();
+        myStack.push(1);
+        myStack.push(2);
+        myStack.push(3);
+            
+        System.out.println("Pop: " + myStack.pop());
+        System.out.println("Pop: " + myStack.pop());
+        //Stack
+    MyQueue<String> myQueue = new MyQueue<>();
+        myQueue.push("A");
+        myQueue.push("B");
+        myQueue.push("C");
 
-       
+    System.out.println(myQueue.pop());
+    System.out.println(myQueue.pop());
+        //Queue
+
+
     }
 }
