@@ -1,4 +1,5 @@
 import java.util.Iterator;
+import java.util.NoSuchElementException;
 
 public class MyLinkedList<T> implements Iterable<T>{
     private Node<T> head;
@@ -15,6 +16,9 @@ public class MyLinkedList<T> implements Iterable<T>{
         }
 
         public T next(){
+            if(!hasNext()){
+                throw new NoSuchElementException();
+            }
             T data = current.data;
             current = current.next;
             return data;
@@ -58,6 +62,7 @@ public class MyLinkedList<T> implements Iterable<T>{
     }
 
     public void delete(int index){
+        if(index < 0 || this.size <= index){throw new IndexOutOfBoundsException();}
         if (index == 0) {
             head = head.next;
         } else {
@@ -70,6 +75,7 @@ public class MyLinkedList<T> implements Iterable<T>{
         size--;
     }
     public T get(int index){
+        if(index < 0 || this.size <= index){throw new IndexOutOfBoundsException();}
         Node<T> current = head;
         for(int i=0;i<index;i++){
             current = current.next;
