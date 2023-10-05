@@ -7,7 +7,9 @@ public class MyStack<T> {
         list.add(data);
     }
     public T pop(){
-
+        if(list.isEmpty()){
+            throw new IllegalStateException("stack is null");
+        }
         int lastIndex = list.size() - 1;
         T data = list.get(lastIndex);
         list.delete(lastIndex);

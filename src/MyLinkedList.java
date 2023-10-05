@@ -5,6 +5,7 @@ public class MyLinkedList<T> implements Iterable<T>{
     private Node<T> head;
     private int size;
 
+
     public Iterator<T> iterator(){
         return new LinkedListIterator();
     }
@@ -43,7 +44,7 @@ public class MyLinkedList<T> implements Iterable<T>{
     public int size(){
         return size;
     }
-    public boolean inEmpty(){
+    public boolean isEmpty(){
         return size ==0;
     }
 
@@ -103,12 +104,12 @@ public class MyLinkedList<T> implements Iterable<T>{
         System.out.println("Pop: " + myStack.pop());
         //Stack
     MyQueue<String> myQueue = new MyQueue<>();
-        myQueue.push("A");
-        myQueue.push("B");
-        myQueue.push("C");
+        myQueue.enqueue("A");
+        myQueue.enqueue("B");
+        myQueue.enqueue("C");
 
-    System.out.println(myQueue.pop());
-    System.out.println(myQueue.pop());
+    System.out.println(myQueue.dequeue());
+    System.out.println(myQueue.dequeue());
         //Queue
 
 
